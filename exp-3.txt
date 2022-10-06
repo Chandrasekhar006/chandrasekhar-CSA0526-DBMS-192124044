@@ -1,0 +1,40 @@
+mysql> desc Student;
++----------+----------+------+-----+---------+-------+
+| Field    | Type     | Null | Key | Default | Extra |
++----------+----------+------+-----+---------+-------+
+| Std_ID   | int(5)   | YES  |     | NULL    |       |
+| std_Name | char(20) | YES  |     | NULL    |       |
+| Gender   | char(5)  | YES  |     | NULL    |       |
+| Phone    | int(15)  | YES  |     | NULL    |       |
+| DOB      | date     | YES  |     | NULL    |       |
+| Year     | int(5)   | YES  |     | NULL    |       |
++----------+----------+------+-----+---------+-------+
+6 rows in set (0.02 sec)
+mysql> INSERT INTO Student VALUES(123,'Raghu','M',9182571,'2002/08/10',2),(143,'Ram','M',8179646,'2003/04/09',1),(153,'Ruchi','F','78935384','2005/06/25',3);
+Query OK, 3 rows affected (0.06 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+mysql> SELECT * FROM Student;
++--------+----------+--------+----------+------------+------+
+| Std_ID | std_Name | Gender | Phone    | DOB        | Year |
++--------+----------+--------+----------+------------+------+
+|    123 | Raghu    | M      |  9182571 | 2002-08-10 |    2 |
+|    143 | Ram      | M      |  8179646 | 2003-04-09 |    1 |
+|    153 | Ruchi    | F      | 78935384 | 2005-06-25 |    3 |
++--------+----------+--------+----------+------------+------+
+3 rows in set (0.00 sec)
+mysql> SELECT std_Name from Student;
++----------+
+| std_Name |
++----------+
+| Raghu    |
+| Ram      |
+| Ruchi    |
++----------+
+3 rows in set (0.00 sec)
+mysql> SELECT * FROM Student WHERE std_Name = 'Raghu';
++--------+----------+--------+---------+------------+------+
+| Std_ID | std_Name | Gender | Phone   | DOB        | Year |
++--------+----------+--------+---------+------------+------+
+|    123 | Raghu    | M      | 9182571 | 2002-08-10 |    2 |
++--------+----------+--------+---------+------------+------+
+1 row in set (0.00 sec)
