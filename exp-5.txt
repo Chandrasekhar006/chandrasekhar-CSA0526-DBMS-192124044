@@ -1,0 +1,25 @@
+mysql> select * from marks;
++-------+---------------------+-----------+-------+-------+
+| sl_no | Name_of_the_student | subject   | Marks | Grade |
++-------+---------------------+-----------+-------+-------+
+|     1 | Raghu               | dbms      |    99 | A     |
+|     1 | Ram                 | physics   |    89 | A     |
+|     2 | Ruchi               | maths     |    77 | B     |
+|     3 | Varu                | chemistry |    88 | B     |
++-------+---------------------+-----------+-------+-------+
+4 rows in set (0.08 sec)
+mysql> select * from marks where sl_no=2;
++-------+---------------------+---------+-------+-------+
+| sl_no | Name_of_the_student | subject | Marks | Grade |
++-------+---------------------+---------+-------+-------+
+|     2 | Ruchi               | maths   |    77 | B     |
++-------+---------------------+---------+-------+-------+
+1 row in set (0.16 sec)
+mysql> select *from marks where Grade='A';
++-------+---------------------+---------+-------+-------+
+| sl_no | Name_of_the_student | subject | Marks | Grade |
++-------+---------------------+---------+-------+-------+
+|     1 | Raghu               | dbms    |    99 | A     |
+|     1 | Ram                 | physics |    89 | A     |
++-------+---------------------+---------+-------+-------+
+2 rows in set (0.00 sec)
