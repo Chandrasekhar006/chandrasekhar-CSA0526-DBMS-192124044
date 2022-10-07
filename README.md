@@ -10,7 +10,6 @@ exp-8
 exp-9
 exp-10
 exp-11
-exp-12
 exp-13
 exp-14
 exp-15
